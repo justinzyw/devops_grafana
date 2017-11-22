@@ -9,7 +9,6 @@ currentTime()
   date +"%Y-%m-%d %H:%M:%S";
 }
 
-sudo docker service scale devops-cadvisor=0
 sudo docker service scale devops-grafana=0
 sudo docker service scale devops-grafanadb=0
 
@@ -66,5 +65,4 @@ $CADVISOR_IMAGE \
 
 sudo docker service scale devops-grafanadb=1
 sudo docker service scale devops-grafana=1
-sudo docker service scale devops-cadvisor=1
 

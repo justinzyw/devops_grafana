@@ -47,7 +47,7 @@ echo ---$(currentTime)---create cadvisor service---
 sudo docker service create -d \
 --publish $CADVISOR_PORT:8080 \
 --name devops-cadvisor \
---hostname="{{.Node.ID}}" \
+--hostname="{{.Node.Hostname}}" \
 --mount type=bind,src=/,dst=/rootfs \
 --mount type=bind,src=/var/run,dst=/var/run \
 --mount type=bind,src=/sys,dst=/sys \
